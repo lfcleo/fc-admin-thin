@@ -2,12 +2,6 @@
     <el-form ref="loginForm" :model="form" :rules="rules" label-width="0" size="large" @keyup.enter="login">
         <el-form-item prop="user">
             <el-input v-model="form.user" prefix-icon="User" clearable :placeholder="$t('login.userPlaceholder')">
-                <template #append>
-                    <el-select v-model="userType" style="width: 130px;">
-                        <el-option :label="$t('login.admin')" value="admin"></el-option>
-                        <el-option :label="$t('login.user')" value="user"></el-option>
-                    </el-select>
-                </template>
             </el-input>
         </el-form-item>
         <el-form-item prop="password">
@@ -35,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, watch } from 'vue';
+import { ref, reactive } from 'vue';
 import { ElMessage, type FormInstance, FormRules } from 'element-plus'
 import { useI18n } from "vue-i18n";
 import router from '@/router'
@@ -53,7 +47,6 @@ interface FormData {
 const { t } = useI18n()
 const authStore = useAuthStore()
 const menuStore = useMenuStore()
-const userType = ref('admin');
 const islogin = ref(false);
 const form = reactive<FormData>({
     user: 'admin',
@@ -70,17 +63,6 @@ const rules = reactive<FormRules<FormData>>({
     ]
 })
 const loginForm = ref<FormInstance>()
-
-// 使用 watch 函数来观察 userType 的变化  
-watch(userType, (newVal) => {
-    if (newVal === 'admin') {
-        form.user = 'admin';
-        form.password = 'admin';
-    } else if (newVal === 'user') {
-        form.user = 'user';
-        form.password = 'user';
-    }
-});
 
 const login = async (formEl: FormInstance | undefined) => {
     if (!formEl) return

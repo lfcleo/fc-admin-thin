@@ -32,11 +32,6 @@
             </div>
             <template #dropdown>
                 <el-dropdown-menu>
-                    <el-dropdown-item @click="userInfoClick()">
-                        <el-icon>
-                            <User />
-                        </el-icon>{{ $t("header.personalData") }}
-                    </el-dropdown-item>
                     <el-dropdown-item @click="clearCache()">
                         <el-icon>
                             <Edit />
@@ -206,10 +201,7 @@ const searchClick = () => {
 const tasksClick = () => {
     tasksVisible.value = true
 }
-//进入个人信息页面
-const userInfoClick = () => {
-    router.push({ path: '/userCenter' });
-}
+
 //清除缓存
 const clearCache = () => {
     ElMessageBox.confirm('清除缓存会将系统初始化，包括主题、语言设置等，是否继续？', '提示', {

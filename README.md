@@ -18,55 +18,19 @@
 
 </div>
 
-## V1.0.1更新日志（Upload Logs）
-* 新增组件`验证码`
-* 新增组件`表单表格`
-* 重构`配置`页面`菜单管理`模板
-* 新增`配置`页面`接口管理`模板
-* 新增`配置`页面`角色管理`模板
-* 新增`配置`页面`用户管理`模板
-* 新增`配置`页面`字典管理`模板
-* 修改组件`图标选择器`图标大小问题
-* 修改组件`树形选择器`搜索框，可根据属性选择是否显示
-* 修改组件`树形选择器`边框，可根据属性选择是否显示
-* 修改组件`树形选择器`全部选项，可根据属性选择是否显示
-* 修改组件`表格`竖线，默认`false`不显示与`el-table`保持一致
-* 重构了一些`interface`模型
-* 删除部分文件调试的`console.log`
-* 修复手机微信浏览器提示版本过低问题
-* 修复`index.html` `title`问题
-
-[更新日志](https://doc.fcadmin.fun/version)
-
 ## 介绍（Introduce）
-FC-Admin 基于VUE3+Vite+ElementPlus+Pinia实现的一款后台管理框架。使用最新的前端技术栈。
-提供一些常用组件、动态路由、权限控制等。加快开发速度。
+FC-Admin-thin 是 [FC-Admin](https://github.com/lfcleo/fc-admin) 的精简版，可以直接用作开发项目工作，无需再从 [FC-Admin](https://github.com/lfcleo/fc-admin) 中做“减法”。
 
-FC-Admin is a backend management framework built with VUE3, Vite, ElementPlus, and Pinia, leveraging the latest front-end technology stack.
-It offers a range of commonly used components, dynamic routing, and permission control, among others, to expedite the development process.
-
-![logo](https://mock.fcadmin.fun/web/img/fc-1.png)
-
-## 演示和文档（Preview and Document）
-
-| 类型 | 链接 |
-| -------- | -------- |
-| 演示地址 （Preview） | https://www.fcadmin.fun |
-| 中文文档 | https://doc.fcadmin.fun |
-| English document | https://doc.fcadmin.fun/en |
-
-## 部分截图（Partial Screenshot）
-
-![logo](https://mock.fcadmin.fun/web/img/fc-2.png)
+FC-Admin-thin is a simplified version of [FC-Admin](https://github.com/lfcleo/fc-admin) that can be directly used for development project work without the need for subtraction from [FC-Admin](https://github.com/lfcleo/fc-admin).
 
 ## 安装教程（Install）
 
 ``` sh
 # 克隆项目
-git clone https://github.com/lfcleo/fc-admin.git
+git clone https://github.com/lfcleo/fc-admin-thin.git
 
 # 进入项目目录
-cd fc-admin
+cd fc-admin-thin
 
 # 安装依赖
 npm i
@@ -74,4 +38,30 @@ npm i
 # 启动项目(开发模式)
 npm run dev
 ```
-启动完成后浏览器访问 http://localhost:2800
+启动完成后浏览器访问 http://localhost:2801
+
+browse http://localhost:2801
+
+## 构建打包项目（Build）
+
+```sh
+# 进入项目目录
+cd fc-admin-thin
+
+# 构建项目
+npm run build
+```
+
+可以查看 [FC-Admin](https://github.com/lfcleo/fc-admin) 的文档和教程进行开发。
+
+You can refer to the documentation and tutorials of [FC-Admin](https://github.com/lfcleo/fc-admin) for development.
+
+## FC-Admin信息（FC-Admin Information）
+
+| 类型 | 链接 |
+| -------- | -------- |
+| GitHub | https://github.com/lfcleo/fc-admin |
+| Gitee | https://gitee.com/lfcleo/fc-admin |
+| 演示地址 （Preview） | https://www.fcadmin.fun |
+| 中文文档 | https://doc.fcadmin.fun |
+| English document | https://doc.fcadmin.fun/en |
